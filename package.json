@@ -1,0 +1,22 @@
+{
+  "name": "trabalho-2",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de uma interface gráfica (GUI) para um sistema de gestão, desenvolvido inicialmente no **Trabalho 1** e aprimorado no **Trabalho 2**.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true
+  }
+}
