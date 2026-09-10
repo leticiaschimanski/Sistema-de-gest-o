@@ -1,58 +1,67 @@
 # Sistema de Gestão
 
-## Descrição
- Desenvolvimento de uma interface gráfica (GUI) para um sistema de gestão, desenvolvido inicialmente no **Trabalho 1** e aprimorado no **Trabalho 2**.
-
-A aplicação foi desenvolvida utilizando **HTML, CSS e JavaScript**, seguindo as práticas de desenvolvimento web, com foco em **semântica, responsividade, acessibilidade e validação de formulários**.
-
-O sistema possui uma interface para cadastro e visualização de produtos, permitindo o preenchimento de informações por meio de formulário e a validação dos dados inseridos pelo usuário.
-
-## Funcionalidades
-
-* Cadastro de produtos.
-* Visualização dos produtos em tabela.
-* Validação dos campos do formulário.
-* Verificação de preenchimento dos campos obrigatórios.
-* Exibição de mensagens de erro para dados inválidos.
-* Impedimento do envio do formulário quando houver informações incorretas.
-* Permissão do envio após o preenchimento correto dos campos.
-* Interface responsiva.
-* Estrutura semântica em HTML.
-* Estilização utilizando CSS.
-* Validações realizadas com JavaScript sem necessidade de recarregar a página.
+Sistema web desenvolvido para gerenciamento de produtos, com autenticação de usuários e controle de acesso.
 
 ## Tecnologias utilizadas
 
-* **HTMl** — estrutura e organização semântica da página.
-* **CSS** — estilização e responsividade da interface.
-* **JavaScript** — validação dos dados inseridos no formulário e interação com a página.
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express
+- SQLite
+- BCrypt
+- Express Session
 
-## Estrutura do projeto
+## Funcionalidades
 
-```text
-📁 Trabalho 2
-│── index.html
-│── style.css
-│── script.js
-└── README.md
-```
+- Cadastro e visualização de produtos
+- Validação dos campos
+- Consulta e validação de CEP
+- Login de usuários
+- Autenticação por sessão
+- Controle de acesso por perfil
+- Perfil Administrador e Usuário Comum
+- Cadastro de usuários pelo administrador
+- Proteção de rotas administrativas
+- Senhas armazenadas com hash BCrypt
+- Layout responsivo
+- Logo do sistema
 
-## Validação do formulário
+## Segurança
 
-O formulário possui validações realizadas diretamente no navegador por meio de JavaScript.
+O sistema utiliza sessões para controlar o acesso dos usuários.
 
-Durante o preenchimento, o sistema verifica se os campos obrigatórios foram preenchidos corretamente. Quando são identificados dados inválidos, são apresentadas mensagens de erro ao usuário.
+As senhas não são armazenadas em texto puro. Elas são protegidas utilizando o algoritmo de hash criptográfico BCrypt.
 
-Após a correção das informações, o formulário pode ser enviado normalmente.
+O sistema também possui controle de acesso por perfil, permitindo que somente administradores acessem a área administrativa e cadastrem novos usuários.
 
 ## Como executar
 
-1. Faça o download ou clone este repositório.
-2. Abra a pasta do projeto no Visual Studio Code.
-3. Abra o arquivo `index.html`.
-4. Execute o projeto utilizando o **Live Server** ou abra o arquivo diretamente em um navegador.
-5. Preencha o formulário para testar as validações.
+1. Instale as dependências:
 
-## Desenvolvido por
+```bash
+npm install
+Inicie o servidor:
+node server.js
+Acesse no navegador:
+http://localhost:3000
+Principais arquivos
+index.html — página principal
+login.html — tela de login
+admin.html — área administrativa
+cadastro-usuario.html — cadastro de usuários
+server.js — servidor, autenticação e controle de acesso
+database.js — banco de dados
+script.js — funcionalidades do sistema
+style.css — estilos e responsividade
+logo.png — logo do sistema
+Testes
 
-**Letícia Schimanski**
+Foram realizados testes de login, senha incorreta, controle de acesso, acesso sem autenticação, validação de dados, entrada semelhante a SQL Injection, armazenamento das senhas com BCrypt, exibição do logo e responsividade.
+
+Resultado: 9 testes realizados, 9 aprovados e 0 reprovados.
+
+Projeto acadêmico
+
+Projeto desenvolvido para fins acadêmicos no curso de Gestão da Tecnologia da Informação.
